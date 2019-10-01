@@ -96,7 +96,7 @@ void selectionSort() {
 		for (int j = i + 1; j < NUM_ELEMENTS; j++) {
 			accessingIndex = j;
 			if (arr[j] < arr[minIndex]) minIndex = j;
-			sf::sleep(sf::seconds(0.00025f));
+			sf::sleep(sf::seconds(0.000999999989f));
 		}
 
 		int item1 = arr[i];
@@ -104,6 +104,7 @@ void selectionSort() {
 
 		arr[i] = item2;
 		arr[minIndex] = item1;
+		sf::sleep(sf::seconds(0.005f));
 
 	}
 
@@ -127,8 +128,9 @@ void insertionSort() {
 				arr[j + 1] = cur;
 				break;
 			}
-			sf::sleep(sf::seconds(0.00025f));
+			sf::sleep(sf::seconds(0.000999999f));
 		}
+		sf::sleep(sf::seconds(0.005f));
 	}
 
 	accessingIndex = -1;
@@ -178,8 +180,9 @@ void bubbleSort() {
 				arr[j] = item2;
 				arr[j + 1] = item1;
 			}
-			sf::sleep(sf::seconds(0.00025f));
+			sf::sleep(sf::seconds(0.000999999f));
 		}
+		sf::sleep(sf::seconds(0.005f));
 	}
 	accessingIndex = -1;
 }
@@ -243,7 +246,7 @@ void cocktailSort() {
 				arr[i + 1] = item1;
 				swapped = true;
 			}
-			sf::sleep(sf::seconds(0.00025f));
+			sf::sleep(sf::seconds(0.000999999f));
 		}
 
 		if (!swapped)
@@ -268,6 +271,7 @@ void cocktailSort() {
 			break;
 
 		frontIndex++;
+		sf::sleep(sf::seconds(0.005f));
 
 	}
 	accessingIndex = -1;
